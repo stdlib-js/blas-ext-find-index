@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import findIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-index@esm/index.mjs';
+import findIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-index@v0.1.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-index@esm/index.mjs';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-index@v0.1.1-esm/index.mjs';
 ```
 
 #### findIndex( x\[, options], clbk\[, thisArg] )
@@ -282,7 +282,7 @@ The method accepts the following options:
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
-import findIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-index@esm/index.mjs';
+import findIndex from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-index@v0.1.1-esm/index.mjs';
 
 // Define a callback function:
 function isEven( v ) {
