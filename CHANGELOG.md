@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-02-25)
+## Unreleased (2026-03-08)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`3b175f7`](https://github.com/stdlib-js/stdlib/commit/3b175f7f2b41f3088afa8e722a08cde865911150) - **bench:** refactor to use string interpolation in blas/ext/find-index [(#10823)](https://github.com/stdlib-js/stdlib/pull/10823) _(by Kamal Singh Rautela)_
 -   [`c66d383`](https://github.com/stdlib-js/stdlib/commit/c66d383f66a223c0bfc3c099ba59826b8f22c783) - **docs:** add missing semicolons in `blas/ext` TypeScript examples _(by Philipp Burckhardt)_
 
 </details>
@@ -24,8 +25,9 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
+-   Kamal Singh Rautela
 -   Philipp Burckhardt
 
 </section>
