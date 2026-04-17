@@ -35,38 +35,32 @@ limitations under the License.
 
 > Return the index of the first element along an [ndarray][@stdlib/ndarray/ctor] dimension which passes a test implemented by a predicate function.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-ext-find-index
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-findIndex = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-index@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var findIndex = require( 'path/to/vendor/umd/blas-ext-find-index/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-index@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.findIndex;
-})();
-</script>
+var findIndex = require( '@stdlib/blas-ext-find-index' );
 ```
 
 #### findIndex( x\[, options], clbk\[, thisArg] )
@@ -86,10 +80,7 @@ var x = array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 
 // Perform operation:
 var out = findIndex( x, isEven );
-// returns <ndarray>
-
-var idx = out.get();
-// returns 1
+// returns <ndarray>[ 1 ]
 ```
 
 The function has the following parameters:
@@ -123,10 +114,7 @@ var ctx = {
     'count': 0
 };
 var out = findIndex( x, isEven, ctx );
-// returns <ndarray>
-
-var idx = out.get();
-// returns 1
+// returns <ndarray>[ 1 ]
 
 var count = ctx.count;
 // returns 2
@@ -153,16 +141,12 @@ var x = array( [ 1.0, 3.0, 5.0, 7.0 ] );
 
 // Perform operation:
 var out = findIndex( x, isEven );
-// returns <ndarray>
-
-var idx = out.get();
-// returns -1
+// returns <ndarray>[ -1 ]
 ```
 
 By default, the function performs the operation over elements in the last dimension. To perform the operation over a different dimension, provide a `dim` option.
 
 ```javascript
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 var array = require( '@stdlib/ndarray-array' );
 
 function isEven( v ) {
@@ -176,17 +160,13 @@ var opts = {
 };
 
 var out = findIndex( x, opts, isEven );
-// returns <ndarray>
-
-var idx = ndarray2array( out );
-// returns [ -1, 0 ]
+// returns <ndarray>[ -1, 0 ]
 ```
 
 By default, the function excludes reduced dimensions from the output [ndarray][@stdlib/ndarray/ctor]. To include the reduced dimensions as singleton dimensions, set the `keepdims` option to `true`.
 
 ```javascript
 var array = require( '@stdlib/ndarray-array' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 
 function isEven( v ) {
     return v % 2.0 === 0.0;
@@ -200,10 +180,7 @@ var opts = {
 };
 
 var out = findIndex( x, opts, isEven );
-// returns <ndarray>
-
-var idx = ndarray2array( out );
-// returns [ [ -1, 0 ] ]
+// returns <ndarray>[ [ -1, 0 ] ]
 ```
 
 By default, the function returns an [ndarray][@stdlib/ndarray/ctor] having a [data type][@stdlib/ndarray/dtypes] determined by the function's output data type [policy][@stdlib/ndarray/output-dtype-policies]. To override the default behavior, set the `dtype` option.
@@ -223,7 +200,7 @@ var opts = {
 };
 
 var idx = findIndex( x, opts, isEven );
-// returns <ndarray>
+// returns <ndarray>[ 1 ]
 
 var dt = dtype( idx );
 // returns 'generic'
@@ -247,10 +224,7 @@ var y = zeros( [], {
 });
 
 var out = findIndex.assign( x, y, isEven );
-// returns <ndarray>
-
-var idx = out.get();
-// returns 1
+// returns <ndarray>[ 1 ]
 
 var bool = ( out === y );
 // returns true
@@ -290,16 +264,11 @@ The method accepts the following options:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-find-index@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var findIndex = require( '@stdlib/blas-ext-find-index' );
 
 // Define a callback function:
 function isEven( v ) {
@@ -324,11 +293,6 @@ var idx = findIndex( x, opts, isEven );
 
 // Print the results:
 console.log( ndarray2array( idx ) );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -415,13 +379,13 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-find-index/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/umd
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/umd
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
 
-[@stdlib/ndarray/output-dtype-policies]: https://github.com/stdlib-js/ndarray-output-dtype-policies/tree/umd
+[@stdlib/ndarray/output-dtype-policies]: https://github.com/stdlib-js/ndarray-output-dtype-policies
 
-[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes/tree/umd
+[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes
 
 </section>
 
