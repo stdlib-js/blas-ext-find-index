@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-04-11)
+## Unreleased (2026-04-17)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`4743252`](https://github.com/stdlib-js/stdlib/commit/4743252abb3eb47297a10260e2ed159389036143) - **docs:** improve doctests for ndarray instances in `blas/ext/find-index` [(#11486)](https://github.com/stdlib-js/stdlib/pull/11486) _(by Uday Kakade)_
 -   [`a0169bc`](https://github.com/stdlib-js/stdlib/commit/a0169bcfc0d05ac94c206ac5d6d0a898ec304463) - **docs:** remove unused `ndarray2array` requires from README usage examples [(#11194)](https://github.com/stdlib-js/stdlib/pull/11194) _(by Philipp Burckhardt)_
 -   [`3b175f7`](https://github.com/stdlib-js/stdlib/commit/3b175f7f2b41f3088afa8e722a08cde865911150) - **bench:** refactor to use string interpolation in blas/ext/find-index [(#10823)](https://github.com/stdlib-js/stdlib/pull/10823) _(by Kamal Singh Rautela)_
 -   [`c66d383`](https://github.com/stdlib-js/stdlib/commit/c66d383f66a223c0bfc3c099ba59826b8f22c783) - **docs:** add missing semicolons in `blas/ext` TypeScript examples _(by Philipp Burckhardt)_
@@ -26,10 +27,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Kamal Singh Rautela
 -   Philipp Burckhardt
+-   Uday Kakade
 
 </section>
 
