@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-19)
+## Unreleased (2026-08-25)
+
+<section class="features">
+
+### Features
+
+-   [`8d28dca`](https://github.com/stdlib-js/stdlib/commit/8d28dca0a9cfc1a7c2b74acdd2061318c6597532) - add `fromIndex` support to `blas/ext/find-index` [(#14525)](https://github.com/stdlib-js/stdlib/pull/14525)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`8d28dca`](https://github.com/stdlib-js/stdlib/commit/8d28dca0a9cfc1a7c2b74acdd2061318c6597532) - **feat:** add `fromIndex` support to `blas/ext/find-index` [(#14525)](https://github.com/stdlib-js/stdlib/pull/14525) _(by Muhammad Haris, Athan Reines)_
 -   [`1eb5c15`](https://github.com/stdlib-js/stdlib/commit/1eb5c15f20bacaf54a2fb41ff6a134423bc04c8e) - **chore:** add keywords [(#14379)](https://github.com/stdlib-js/stdlib/pull/14379) _(by Philipp Burckhardt)_
 -   [`b17716c`](https://github.com/stdlib-js/stdlib/commit/b17716c5954f979e72011c0dd34dde9853f3a661) - **chore:** modernize benchmarks and examples [(#12884)](https://github.com/stdlib-js/stdlib/pull/12884) _(by Karan Anand, Athan Reines)_
 -   [`1c2eddf`](https://github.com/stdlib-js/stdlib/commit/1c2eddf59350cdc7dfd3d66eab07ab0291d5f9f6) - **test:** fix dtype comparisons _(by Athan Reines)_
@@ -30,11 +41,12 @@
 
 ### Contributors
 
-A total of 5 people contributed to this release. Thank you to the following contributors:
+A total of 6 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Kamal Singh Rautela
 -   Karan Anand
+-   Muhammad Haris
 -   Philipp Burckhardt
 -   Uday Kakade
 
